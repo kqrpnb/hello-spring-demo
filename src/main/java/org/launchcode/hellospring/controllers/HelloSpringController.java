@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
  * Created by Chris Bay
  */
 @Controller
-public class HelloController {
+public class HelloSpringController {
 
     //    // Handle request at path /hello
 //    @GetMapping("hello")
@@ -38,16 +38,8 @@ public class HelloController {
 
 
     @GetMapping("form")
-    @ResponseBody
     public String helloForm() {
-        return "<html>" +
-                "<body>" +
-                "<form action = 'hello' method = 'post'>" + // submit a request to /hello
-                "<input type = 'text' name = 'name' >" +
-                "<input type = 'submit' value = 'Greet Me!' >" +
-                "</form>" +
-                "</body>" +
-                "</html>";
+        return "form";
     }
 
 }
