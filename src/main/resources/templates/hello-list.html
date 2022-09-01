@@ -5,6 +5,12 @@
     <title>By Sean Duffy</title>
 </head>
 <body>
-   <p th:text="${greeting}">Hello, Spring</p>
+
+   <ul>
+      <th:block th:each="name : ${names}">
+         <li th:text="${name}">name list item</li>
+      </th:block>
+   </ul>
+
 </body>
 </html>
